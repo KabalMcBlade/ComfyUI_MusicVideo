@@ -95,6 +95,8 @@ non_diegetic_music:
 Use the supplied master song continuously as the music track.
 ```
 
+![MiniMax H3 Music Video node configured for a short song with four reference images and a structured shot prompt](screenshot_node_sample.png)
+
 The headings before the first shot and the soundscape sections are shared across all generated shots. Each `[Shot N]` body should describe only that part of the video. Shot markers must appear on their own lines and should be numbered in order.
 
 ### Output files
