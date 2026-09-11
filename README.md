@@ -26,14 +26,14 @@ Automatic stitching is optional. Disable **Stitch final video** to keep only the
 - Generates at 24 FPS using the H3 `5 mod 17` frame rule, then trims every decoded shot to its real duration.
 - Always writes silent `shots/shot_###.mp4` files. It can additionally create per-shot audio previews.
 - Advanced settings can render every shot (`-1`) or only one displayed, 1-based shot index.
-- An optional final Lanczos resize uses the supplied workflow's active `ImageResizeKJv2` settings—crop, centered, divisible by 2, on CPU—at aspect-aligned HD dimensions: 1920×1080 for 16:9, 1080×1920 for 9:16, 1080×1080 for 1:1, 1440×1080 for 4:3, 1080×1440 for 3:4, and 2520×1080 for 21:9.
+- An optional final Lanczos resize uses the project's default `ImageResizeKJv2` settings—crop, centered, divisible by 2, on CPU—at aspect-aligned HD dimensions: 1920×1080 for 16:9, 1080×1920 for 9:16, 1080×1080 for 1:1, 1440×1080 for 4:3, 1080×1440 for 3:4, and 2520×1080 for 21:9.
 - Optionally concatenates the silent shots and muxes the original uploaded master audio once into `final_music_video.mp4`.
 
 The node is registered as **MiniMax H3 Music Video** in the **Music Video** category.
 
 ## Required local models
 
-Defaults mirror the active REF2VA path in the supplied workflow:
+The default local model filenames used by the REF2VA pipeline are:
 
 - `models/diffusion_models/minimax_h3_ref2va_pruned_nvfp4.safetensors`
 - `models/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`
@@ -41,7 +41,7 @@ Defaults mirror the active REF2VA path in the supplied workflow:
 - `models/vae/minimax_h3_audio_vae_fp32.safetensors`
 - `models/loras/MINIMAX/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors`
 
-Use a current ComfyUI build containing the MiniMax H3 nodes plus KJNodes and SageAttention for the two attention patches selected by the source workflow. `ffmpeg` must be on `PATH`, or its full executable path must be entered under Advanced.
+Use a current ComfyUI build containing the MiniMax H3 nodes plus KJNodes and SageAttention required by this configuration. `ffmpeg` must be on `PATH`, or its full executable path must be entered under Advanced.
 
 ## How to use
 
@@ -96,6 +96,8 @@ Use the supplied master song continuously as the music track.
 ```
 
 ![MiniMax H3 Music Video node configured for a short song with four reference images and a structured shot prompt](screenshot_node_sample.png)
+
+The reference images shown in `screenshot_node_sample.png` were generated locally with Krea 2. No Krea model weights are included in this repository.
 
 The headings before the first shot and the soundscape sections are shared across all generated shots. Each `[Shot N]` body should describe only that part of the video. Shot markers must appear on their own lines and should be numbered in order.
 
@@ -195,4 +197,12 @@ Each shot is generated independently. The reference images encourage consistency
 
 Before committing to a complete long render, write the full prompt with the required number of sections and test representative shots using **Shot to generate**. For example, test an early shot, a location change, and a final shot. Single-shot mode still requires the complete prompt to contain one section for every planned audio chunk. When the results are satisfactory, set **Shot to generate** back to `-1`, keep **Stitch final video** enabled, and queue the complete render.
 
-An example workflow is in `examples/minimax_h3_music_video.json`.
+An example workflow is in `examples/minimax_h3_music_video.json`. This is a minimal project example for configuring the node; it does not contain MiniMax model weights or a redistributed third-party filmmaking workflow.
+
+## License
+
+Current versions of this project are licensed under the **Apache License 2.0**. See `LICENSE`.
+
+Versions that were previously distributed under the MIT License remain usable under the MIT terms that applied to those copies. The license change does not retroactively revoke rights already granted under the MIT License.
+
+The Apache License 2.0 applies to this project's own code and original repository material only. MiniMax H3 and other third-party models are separately licensed and are not distributed by this repository. See `MODEL_LICENSE.md`.
