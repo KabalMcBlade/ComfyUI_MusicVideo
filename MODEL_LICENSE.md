@@ -1,10 +1,11 @@
 # Model licensing
 
-The Apache License 2.0 in this repository applies only to the original source
-code and other original repository material distributed by this project.
+The GNU General Public License v3.0 only (GPL-3.0-only) in this repository
+applies only to the original source code and other original repository material
+distributed by this project.
 
 MiniMax H3, its model weights, model derivatives, and associated components
-are not licensed under this repository's Apache License 2.0. MiniMax H3 is
+are not licensed under this repository's GPL-3.0-only license. MiniMax H3 is
 separately subject to the MiniMax H3 Community License Agreement and its
 Acceptable Use Policy:
 
@@ -34,7 +35,7 @@ territorial terms of the standard Community License for that licensee. An
 authorization granted to one person or entity does not automatically extend to
 other users of this repository.
 
-Generated outputs are not licensed by this repository's Apache License 2.0.
+Generated outputs are not licensed by this repository's GPL-3.0-only license.
 Users remain responsible for any terms, Acceptable Use Policies, and third-party
 rights that apply to the models and content they use.
 

@@ -201,8 +201,12 @@ An example workflow is in `examples/minimax_h3_music_video.json`. This is a mini
 
 ## License
 
-Current versions of this project are licensed under the **Apache License 2.0**. See `LICENSE`.
+Current versions of this project are licensed under the **GNU General Public License v3.0 only (GPL-3.0-only)**. See `LICENSE`.
 
-Versions that were previously distributed under the MIT License remain usable under the MIT terms that applied to those copies. The license change does not retroactively revoke rights already granted under the MIT License.
+Copyright © 2026 Michele Condo'. Copyright and authorship notices applicable to the original project must be preserved in accordance with the license.
 
-The Apache License 2.0 applies to this project's own code and original repository material only. MiniMax H3 and other third-party models are separately licensed and are not distributed by this repository. See `MODEL_LICENSE.md`.
+Versions of this project that were previously distributed under the **MIT License** or the **Apache License 2.0** remain usable under the license terms that applied to those copies. The current license does not retroactively revoke rights previously granted.
+
+The GPL-3.0-only license applies to this project's own code and original repository material only. **ComfyUI is a separate project licensed under the GNU General Public License v3.0 and is not distributed by this repository.**
+
+MiniMax H3 and other third-party models, libraries, assets, and components remain subject to their respective licenses and are not relicensed by this project. MiniMax H3 model weights are not distributed by this repository. See `MODEL_LICENSE.md`.

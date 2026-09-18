@@ -1,8 +1,14 @@
 ComfyUI MiniMax H3 Music Video
-Copyright 2026 Michele Condo'
+Copyright (C) 2026 Michele Condo'
 
-Licensed under the Apache License, Version 2.0.
-See the LICENSE file for the full license text.
+This project is licensed under the GNU General Public License v3.0 only
+(GPL-3.0-only). See the LICENSE file for the full license text.
 
-MiniMax H3 and other third-party models are not included in this repository
-and are governed by their own licenses. See MODEL_LICENSE.md.
+Michele Condo' is the original author of ComfyUI MiniMax H3 Music Video.
+Redistributions and modified versions must comply with the applicable license,
+including its requirements concerning preservation of copyright and license
+notices and identification of modified versions.
+
+MiniMax H3, ComfyUI, and other third-party models, libraries, assets, and
+components are not relicensed by this project and remain governed by their own
+licenses. See MODEL_LICENSE.md for model-specific information.

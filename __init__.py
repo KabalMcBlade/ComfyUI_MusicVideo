@@ -1,3 +1,7 @@
+# Copyright (C) 2026 Michele Condo'
+# This file is part of ComfyUI MiniMax H3 Music Video.
+# SPDX-License-Identifier: GPL-3.0-only
+
 from .nodes.minimax_music_video import MiniMaxH3MusicVideo
 
 NODE_CLASS_MAPPINGS = {
